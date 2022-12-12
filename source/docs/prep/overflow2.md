@@ -4,7 +4,7 @@
 #!/usr/bin/env python3
 import socket
 
-ip = "192.168.112.135"
+ip = "KALI_IP"
 port = 1337
 
 buf_length = 1100
