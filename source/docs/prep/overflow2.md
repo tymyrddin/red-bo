@@ -1,6 +1,6 @@
 # Buffer overflow 2
 
-Badchars: `\x00\x07\x2e\xa0`
+Badchars: `\x00\x23\x3c\x83\xba`
 
 ## Exploit code
 

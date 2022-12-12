@@ -4,7 +4,7 @@ Buffer overflow exploitation
 .. toctree::
    :maxdepth: 1
    :includehidden:
-   :caption: Immunity
+   :caption: Immunity Debugger
 
    docs/prep/README.md
    docs/prep/overflow1.md
