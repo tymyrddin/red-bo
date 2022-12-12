@@ -1,4 +1,4 @@
-# Buffer overflow 1
+# Stack-based buffer overflow howto
 
 1. Start the AttackBox or run from a Kali connected to THM over VPN
 2. Start the Machine and note the IP address. Remote desktop from your Linux virtual machine or the AttackBox to 
@@ -351,5 +351,6 @@ reverse shell.
 ## Resources
 
 * [A Beginner’s Guide to Buffer Overflow](https://www.hackingarticles.in/a-beginners-guide-to-buffer-overflow/)
+* [justinsteven/dostackbufferoverflowgood](https://github.com/justinsteven/dostackbufferoverflowgood)
 
 
