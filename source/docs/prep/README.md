@@ -2,11 +2,12 @@
 
 ## What?
 
-Buffer Overflow Prep
+Generating stack-based payloads for a vulnerable binary with Immunity Debugger.
 
 ## Why?
 
-Practice stack based buffer overflows!
+Buffer overflows are used in many of the exploits against vulnerable services. Most of these are pre-compiled by 
+exploit developers.
 
 ## How?
 
