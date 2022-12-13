@@ -2,15 +2,19 @@
 
 ## What?
 
-Generating stack-based payloads for a vulnerable binary with Immunity Debugger.
+Being able to generate stack-based payloads for a vulnerable binary using Immunity Debugger.
 
 ## Why?
 
 Buffer overflows are used in many of the exploits against vulnerable services. Most of these are pre-compiled by 
-exploit developers.
+exploit developers. To be able to generate payloads locally, set up a Kali VM and a Windows VM with Immunity Debugger
+(on the same network)
 
 ## How?
 
-* [Stack-based buffer overflow howto](overflow1.md)
-* [Example final code](overflow10.md)
+* [Kali VM](kali.md)
+* [Windows VM](windows.md)
+* [Installing Immunity Debugger](immunity.md)
+* [Using Immunity Debugger](overflow1.md)
+* [Example payload script](overflow10.md)
 

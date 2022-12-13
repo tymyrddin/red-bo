@@ -4,9 +4,12 @@ Woodpeckers
 .. toctree::
    :maxdepth: 1
    :includehidden:
-   :caption: Immunity Debugger
+   :caption: Preparations
 
    docs/prep/README.md
+   docs/prep/kali.md
+   docs/prep/windows.md
+   docs/prep/immunity.md
    docs/prep/overflow1.md
    docs/prep/overflow10.md
 

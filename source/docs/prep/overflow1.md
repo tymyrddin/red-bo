@@ -1,4 +1,4 @@
-# Stack-based buffer overflow howto
+# Using Immunity Debugger
 
 1. Start the AttackBox or run from a Kali connected to THM over VPN
 2. Start the Machine and note the IP address. Remote desktop from your Linux virtual machine or the AttackBox to 

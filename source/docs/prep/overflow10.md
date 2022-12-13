@@ -1,4 +1,4 @@
-# Example final code
+# Example payload scripts
 
 Badchars: `\x00\xa0\xad\xbe\xde\xef`
 
