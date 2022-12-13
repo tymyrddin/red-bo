@@ -26,4 +26,5 @@ This project welcomes contributions and suggestions.
 [Open an issue here](https://github.com/tymyrddin/red-bo/issues)
 
 ## Mind
+
 Where you stand depends on where you sit, and all threats are cross-vector threats. Without a clear mandate for testing, measuring and reporting actual improvements in security, attempts at improving security makes absolutely no sense, not even for the low-hanging fruit.  

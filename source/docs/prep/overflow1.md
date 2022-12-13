@@ -1,21 +1,21 @@
 # Using Immunity Debugger
 
-1. Start the AttackBox or run from a Kali connected to THM over VPN
-2. Start the Machine and note the IP address. Remote desktop from your Linux virtual machine or the AttackBox to 
-the IP address of the Machine using Remmina. 
+1. Run Kali VM connected to THM over VPN. 
+2. Start the Room Machine and note the IP address. Remote desktop from your Kali VM to the IP address of the 
+Machine using Remmina. 
 
 ```text
 xfreerdp /u:admin /p:password /cert:ignore /v:MACHINE_IP /workarea
 ```
 
-## Setting up Immunity
+## Start Immunity
 
 | ![First run Immunity](../../_static/images/overflow1a.png) |
 |:--:|
 | Immunity setup |
 
 3. In the Machine, right-click the `Immunity Debugger` icon on the Desktop and choose `Run as administrator`. 
-4. When Immunity loads, , configure mona (bottom of Immunity):
+4. When Immunity loads, configure mona (bottom of Immunity):
 
 ```text
 !mona config -set workingfolder c:\mona\%p
@@ -25,7 +25,7 @@ xfreerdp /u:admin /p:password /cert:ignore /v:MACHINE_IP /workarea
 on the admin user's desktop, and then the `oscp` folder. Select the `oscp.exe` binary and open it.
 6. The binary will open in a "paused" state, so click the red play icon or choose `Debug -> Run`. 
 7. In a terminal window, the `oscp.exe` binary should be running, and tells us that it is listening on port `1337`.
-8. On the Kali box or Attack box, connect to port `1337` on `MACHINE` using netcat:
+8. On the Kali box, connect to port `1337` on `MACHINE` using netcat:
 
 ```text
 nc MACHINE_IP 1337

