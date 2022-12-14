@@ -314,8 +314,7 @@ Catch it in the listener:
     whoami
     gatekeeper\natbat
 
-
-## User flag
+Get first flag:
 
     C:\Users\natbat\Desktop>dir
     dir
