@@ -12,5 +12,3 @@ Practice exploitation of services vulnerable to buffer overflow.
 
 * [THM Brainstorm](brainstorm.md)
 * [THM Gatekeeper](gatekeeper.md)
-* [THM Brainpan](brainpan1.md)
-

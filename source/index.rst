@@ -21,7 +21,6 @@ Woodpeckers
    docs/ctf/README.md
    docs/ctf/brainstorm.md
    docs/ctf/gatekeeper.md
-   docs/ctf/brainpan1.md
 
 .. toctree::
    :caption: Links

