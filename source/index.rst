@@ -1,6 +1,16 @@
 Woodpeckers
 ========================================================
 
+Buffer overflows are used in many of the exploits that we use against vulnerable services. Most of these are
+pre-compiled by exploit developers.
+
+----
+
+.. image:: _static/images/hacking-the-art-of-exploitation.png
+  :alt: Useful books
+
+----
+
 .. toctree::
    :maxdepth: 1
    :includehidden:
