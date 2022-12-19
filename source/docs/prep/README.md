@@ -16,9 +16,9 @@ exploit developers. To be able to generate payloads locally, set up a Kali VM an
 
 ## How?
 
-* [Kali VM](kali.md)
-* [Windows VM](windows.md)
-* [Installing Immunity Debugger](immunity.md)
+* [Kali VM](red-iac:docs/lab/kali)
+* [Windows VM](red-iac:docs/lab/windows)
+* [Installing Immunity Debugger](red-iac:docs/lab/immunity)
 * [Using Immunity Debugger](overflow1.md)
 * [Example payload script](overflow10.md)
 

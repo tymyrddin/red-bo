@@ -14,12 +14,12 @@ pre-compiled by exploit developers.
 .. toctree::
    :maxdepth: 1
    :includehidden:
-   :caption: Preparations
+   :caption: Weaponisation
 
    docs/prep/README.md
-   docs/prep/kali.md
-   docs/prep/windows.md
-   docs/prep/immunity.md
+   Install a Kali VM <https://red.tymyrddin.dev/projects/iac/en/latest/docs/lab/kali.html>
+   Install a Windows VM <https://red.tymyrddin.dev/projects/iac/en/latest/docs/lab/windows.html>
+   Installing Immunity Debugger on Windows <https://red.tymyrddin.dev/projects/iac/en/latest/docs/lab/immunity.html>
    docs/prep/overflow1.md
    docs/prep/overflow10.md
 

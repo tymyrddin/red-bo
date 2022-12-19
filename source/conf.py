@@ -43,7 +43,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
-    'style_external_links': True,
+    'style_external_links': False,
     # Toc options
     'collapse_navigation': False,
     'sticky_navigation': False,
@@ -78,5 +78,6 @@ html_show_copyright = False
 # Intersphinx
 intersphinx_mapping = {
     "red":("https://red.tymyrddin.dev/en/latest/", None),
+    "red-iac": ("https://red.tymyrddin.dev/projects/iac/en/latest/", None),
 }
 myst_url_schemes = ["http", "https", ]
