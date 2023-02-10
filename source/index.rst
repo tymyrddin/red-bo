@@ -6,11 +6,6 @@ pre-compiled by exploit developers.
 
 ----
 
-.. image:: _static/images/hacking-the-art-of-exploitation.png
-  :alt: Useful books
-
-----
-
 .. toctree::
    :maxdepth: 1
    :includehidden:
@@ -26,13 +21,13 @@ pre-compiled by exploit developers.
 .. toctree::
    :maxdepth: 1
    :includehidden:
-   :caption: Capture The Flag
+   :caption: Capture the flag
 
    docs/ctf/README.md
    docs/ctf/brainstorm.md
    docs/ctf/gatekeeper.md
 
-.. toctree::
-   :caption: Links
+----
 
-   Red Team <https://red.tymyrddin.dev/>
+.. image:: _static/images/hacking-the-art-of-exploitation.png
+  :alt: Useful books
