@@ -1,22 +1,24 @@
 Woodpeckers
 ========================================================
 
-Buffer overflows are used in many of the exploits that we use against vulnerable services. Most of these are
-pre-compiled by exploit developers.
+Buffer overflows are used in many of the exploits against vulnerable services. Most of these are pre-compiled byexploit developers. To be able to generate payloads locally, set up a Kali VM and a Windows VM with Immunity Debugger (on the same network).
+
+.. image:: _static/images/in-progress.png
+  :alt: Forever in progress ...
 
 ----
 
 .. toctree::
    :maxdepth: 1
    :includehidden:
-   :caption: Weaponisation
+   :caption: Preparation
 
-   docs/prep/README.md
-   Install a Kali VM <https://red.tymyrddin.dev/projects/iac/en/latest/docs/lab/kali.html>
-   Install a Windows VM <https://red.tymyrddin.dev/projects/iac/en/latest/docs/lab/windows.html>
-   Installing Immunity Debugger on Windows <https://red.tymyrddin.dev/projects/iac/en/latest/docs/lab/immunity.html>
-   docs/prep/overflow1.md
-   docs/prep/overflow10.md
+   Testlab: Assemblers and compilers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/dev/README.html>
+   Testlab: Disssemblers and decompilers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/dis/README.html>
+   Testlab: Shellcoding tools <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/shellcoding/README.html>
+   Testlab: Exploitation tools <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/exploitation/README.html>
+   docs/overflow1.md
+   docs/overflow10.md
 
 .. toctree::
    :maxdepth: 1

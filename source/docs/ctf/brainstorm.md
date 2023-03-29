@@ -8,7 +8,7 @@ Reverse engineer a chat program and write a script to exploit a Windows machine.
 
 ## Requirements
 
-[A small local lab](../prep/README.md).
+[A small local lab](red-testlab:index).
 
 ## Scanning
 
