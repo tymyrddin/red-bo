@@ -2,7 +2,7 @@
 |:--:|
 | [THM Brainstorm](https://tryhackme.com/room/brainstorm) |
 
-# THM Brainstorm
+# Brainstorm
 
 Reverse engineer a chat program and write a script to exploit a Windows machine.
 

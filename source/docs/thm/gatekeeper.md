@@ -2,7 +2,7 @@
 |:--:|
 | [THM Gatekeeper](https://tryhackme.com/room/gatekeeper) |
 
-# THM Gatekeeper
+# Gatekeeper
 
 Can you get past the gate and through the fire?
 
@@ -183,7 +183,7 @@ Start a web server on the Kali VM in the directory with the files (to download t
 
 ## Exploiting buffer overflow
 
-Get the binary file from the Kali box and follow the [stack-based buffer overflow howto](../overflow1.md) 
+Get the binary file from the Kali box and follow the [stack-based buffer overflow howto](overflow1.md) 
 for creating BoF scripts, with:
 
     Offset: 146
