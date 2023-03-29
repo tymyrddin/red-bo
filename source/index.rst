@@ -16,6 +16,45 @@ Buffer overflows are used in many of the exploits against vulnerable services. M
    Virtual machines <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/vm/README.html>
    Assemblers and compilers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/dev/README.html>
    Disassemblers and decompilers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/dis/README.html>
+   Shellcoding tools <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/shellcoding/README.html>
+
+----
+
+.. toctree::
+   :maxdepth: 1
+   :includehidden:
+   :caption: Notes on techniques
+
+   docs/notes/README.md
+   docs/notes/stack.md
+   docs/notes/heap.md
+   docs/notes/integer.md
+   docs/notes/unicode.md
+   docs/notes/string.md
+
+.. toctree::
+   :maxdepth: 1
+   :includehidden:
+   :caption: Windows overflows
+
+   docs/windows/README.md
+
+.. toctree::
+   :maxdepth: 1
+   :includehidden:
+   :caption: Linux overflows
+
+   docs/linux/README.md
+
+----
+
+.. toctree::
+   :maxdepth: 1
+   :includehidden:
+   :caption: Coding
+
+   Windows <https://github.com/tymyrddin/codes-bof/tree/main/windows>
+   Linux <https://github.com/tymyrddin/codes-bof/tree/main/linux>
 
 ----
 
