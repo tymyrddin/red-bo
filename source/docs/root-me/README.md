@@ -12,3 +12,4 @@ Practice exploitation of programs vulnerable to buffer overflow.
 
 * [ELF x86: Stack buffer overflow basic 1](elf-86-stack-basic.md)
 * [ELF x64: Basic heap overflow](elf-64-heap-basic1.md)
+* [ELF x86: Stack buffer overflow basic 2](elf-86-stack-basic2.md)

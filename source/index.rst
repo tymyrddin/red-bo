@@ -1,7 +1,7 @@
 Woodpeckers
 ========================================================
 
-Buffer overflows are used in many of the exploits against vulnerable services. Most of these are pre-compiled byexploit developers. To be able to generate payloads locally, set up a Kali VM and a Windows VM with Immunity Debugger (on the same network).
+Buffer overflows are used in many of the exploits against vulnerable services. Most of these are pre-compiled byexploit developers. To be able to generate payloads locally, set up a Kali VM with the necessary tools, and a Windows VM with Immunity Debugger (on the same network).
 
 .. image:: _static/images/in-progress.png
   :alt: Forever in progress ...
@@ -11,10 +11,13 @@ Buffer overflows are used in many of the exploits against vulnerable services. M
 .. toctree::
    :maxdepth: 1
    :includehidden:
-   :caption: Testlab
+   :caption: Setup
 
+   Virtual machines <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/vm/README.html>
    Assemblers and compilers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/dev/README.html>
    Disassemblers and decompilers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/dis/README.html>
+
+----
 
 .. toctree::
    :maxdepth: 1
@@ -36,6 +39,7 @@ Buffer overflows are used in many of the exploits against vulnerable services. M
    docs/root-me/README.md
    docs/root-me/elf-86-stack-basic.md
    docs/root-me/elf-64-heap-basic1.md
+   docs/root-me/elf-86-stack-basic2.md
 
 ----
 
