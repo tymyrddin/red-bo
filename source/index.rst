@@ -1,7 +1,9 @@
 Woodpeckers
 ========================================================
 
-Buffer overflows are used in many of the exploits against vulnerable services. Most of these are pre-compiled byexploit developers. To be able to generate payloads locally, set up a Kali VM with the necessary tools, and a Windows VM with Immunity Debugger (on the same network).
+Nearly all applications, web servers, and web application environments are vulnerable to buffer overflows. Environments that are written in interpreted languages, such as Java and Python, are immune to the attacks, with the exception of overflows in their interpreter. These issues are particularly problematic in the programming language C/C++ as it does not have buffer overflow protection built in.
+
+Buffer overflows are used in many of the exploits against vulnerable services. Most of these are pre-compiled by exploit developers. To be able to generate payloads locally, set up a Kali VM with the necessary tools, and a Windows VM with Immunity Debugger (on the same network).
 
 .. image:: _static/images/in-progress.png
   :alt: Forever in progress ...
