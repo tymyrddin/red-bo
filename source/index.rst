@@ -16,7 +16,7 @@ Buffer overflows are used in many of the exploits against vulnerable services. M
    :caption: Setup
 
    Virtual machines <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/vm/README.html>
-   Assemblers and compilers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/dev/README.html>
+   Assemblers and compilers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/asm/README.html>
    Disassemblers and decompilers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/dis/README.html>
    Shellcoding tools <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/shellcoding/README.html>
 
