@@ -13,7 +13,7 @@ Buffer overflows are used in many of the exploits against vulnerable services. M
 .. toctree::
    :maxdepth: 1
    :includehidden:
-   :caption: Setup
+   :caption: Testlab
 
    Virtual machines <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/vm/README.html>
    Assemblers <https://red.tymyrddin.dev/projects/testlab/en/latest/docs/asm/README.html>
