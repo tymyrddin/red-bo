@@ -10,9 +10,7 @@ Buffer overflows are a common type of security vulnerability, particularly in le
 
 ## How?
 
-* [Stack-based buffer overflows](stack.md)
-* [Heap-based buffer overflows](heap.md)
-* [Integer overflows](integer.md)
-* [Unicode overflows](unicode.md)
-* [Format string attacks](string.md)
+* [Stack operations and function-calling](patterns.md)
+* [Linux x86 exploits](linux-x86.md)
+
 

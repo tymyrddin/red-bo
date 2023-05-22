@@ -32,25 +32,8 @@ Buffer overflows are used in many of the exploits against vulnerable services. M
    :caption: Notes on techniques
 
    docs/notes/README.md
-   docs/notes/stack.md
-   docs/notes/heap.md
-   docs/notes/integer.md
-   docs/notes/unicode.md
-   docs/notes/string.md
-
-.. toctree::
-   :maxdepth: 1
-   :includehidden:
-   :caption: Windows overflows
-
-   docs/windows/README.md
-
-.. toctree::
-   :maxdepth: 1
-   :includehidden:
-   :caption: Linux overflows
-
-   docs/linux/README.md
+   docs/notes/patterns.md
+   docs/notes/linux-x86.md
 
 ----
 
@@ -82,9 +65,24 @@ Buffer overflows are used in many of the exploits against vulnerable services. M
    :caption: Root-me
 
    docs/root-me/README.md
-   docs/root-me/elf-86-stack-basic.md
+   docs/root-me/elf-86-stack-basic1.md
    docs/root-me/elf-64-heap-basic1.md
    docs/root-me/elf-86-stack-basic2.md
+   docs/root-me/elf-86-string-basic1.md
+   docs/root-me/elf-64-stack-basic.md
+   docs/root-me/elf-86-string-basic2.md
+   docs/root-me/elf-86-race-condition.md
+   docs/root-me/elf-arm-stack-basic.md
+   docs/root-me/elf-86-stack-basic3.md
+   docs/root-me/elf-86-free-basic.md
+   docs/root-me/elf-86-bss.md
+   docs/root-me/elf-86-stack-basic4.md
+   docs/root-me/elf-86-stack-basic6.md
+   docs/root-me/elf-86-string-basic3.md
+   docs/root-me/elf-arm-basic-rop.md
+   docs/root-me/elf-86-stack-cpp.md
+   docs/root-me/elf-86-stack-basic5.md
+   docs/root-me/elf-86-remote-string.md
 
 ----
 
